@@ -34,7 +34,7 @@ namespace LAB_ASSIGNMENTS_2
             double interestEarned = Balance * monthlyInterestRate * numberOfMonths;
             Balance += interestEarned;
 
-            Console.WriteLine($"Interest calculated for {numberOfMonths} months. New balance: ${Balance:F2}");
+            Console.WriteLine("Interest calculated for" +numberOfMonths +"months. New balance:" +Balance");
         }
     }
 
@@ -50,7 +50,7 @@ namespace LAB_ASSIGNMENTS_2
             double rate = Convert.ToDouble( Console.ReadLine() );
             SavingsAccount savingsAccount = new SavingsAccount(account,balance,rate);
 
-            // Calculate interest for 6 months
+        
             savingsAccount.CalculateInterest(6);
             Console.ReadKey();
         }
