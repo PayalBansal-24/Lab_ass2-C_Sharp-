@@ -10,8 +10,8 @@ namespace Person
     {
         public void PrintFullName()
         {
-            string fullName = ($"{FirstName} {LastName}");
-            Console.WriteLine($"Full Name: {fullName}");
+            string fullName = (FirstName + LastName);
+            Console.WriteLine("Full Name:" +fullName);
         }
 
         static void Main(string[] args)
@@ -25,8 +25,8 @@ namespace Person
             person.PrintFullName(); // Calls the PrintFullName method
 
             // You can also access properties individually
-            Console.WriteLine($"First Name: {person.FirstName}");
-            Console.WriteLine($"Last Name: {person.LastName}");
+            Console.WriteLine("First Name:" +person.FirstName);
+            Console.WriteLine("Last Name:" +person.LastName);
 
             Console.ReadKey();
         }
