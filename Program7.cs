@@ -49,10 +49,10 @@ namespace LAB_ASSIGNMENTS_2
         {
 
             Circle circle = new Circle(5);
-            Console.WriteLine($"Circle Area: +circle.CalculateArea():F2");
+            Console.WriteLine("Circle Area:" +circle.CalculateArea());
 
             Rectangle rectangle = new Rectangle(4, 6);
-            Console.WriteLine($"Rectangle Area: +rectangle.CalculateArea():F2");
+            Console.WriteLine("Rectangle Area:" +rectangle.CalculateArea());
             Console.ReadKey();
         }
     }
