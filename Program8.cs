@@ -33,12 +33,12 @@ namespace LAB_ASSIGNMENTS_2
 
         public override void MakeSound()
         {
-            Console.WriteLine($"{Name} the {Breed} barks.");
+            Console.WriteLine(+Name +"the" +Breed +"barks.");
         }
 
         public void Fetch()
         {
-            Console.WriteLine($"{Name} fetches a ball.");
+            Console.WriteLine(+Name +"fetches a ball.");
         }
     }
 
@@ -54,12 +54,12 @@ namespace LAB_ASSIGNMENTS_2
 
         public override void MakeSound()
         {
-            Console.WriteLine($"{Name} the cat meows.");
+            Console.WriteLine(+Name +"the cat meows.");
         }
 
         public void Scratch()
         {
-            Console.WriteLine($"{Name} the cat scratches the furniture.");
+            Console.WriteLine(+Name +"the cat scratches the furniture.");
         }
     }
     internal class Program
@@ -69,11 +69,11 @@ namespace LAB_ASSIGNMENTS_2
             Dog dog = new Dog("Buddy", 3, "Golden Retriever");
             Cat cat = new Cat("Whiskers", 2, true);
 
-            Console.WriteLine($"{dog.Name} is {dog.Age} years old.");
+            Console.WriteLine(+dog.Name +"is" +dog.Age +"years old.");
             dog.MakeSound();
             dog.Fetch();
 
-            Console.WriteLine($"{cat.Name} is {cat.Age} years old.");
+            Console.WriteLine(+cat.Name +"is" +cat.Age +"years old.");
             cat.MakeSound();
             cat.Scratch();
             Console.ReadKey();
