@@ -22,11 +22,11 @@ namespace Employee1
 
             public void DisplayEmployeeDetails()
             {
-                Console.WriteLine($"Employee ID: {EmployeeId}");
-                Console.WriteLine($"Name: {FirstName} {LastName}");
-                Console.WriteLine($"Base Salary: ${BaseSalary:F2}");
-                Console.WriteLine($"Years of Work: {YearsOfWork}");
-                Console.WriteLine($"Calculated Salary: ${CalculateSalary():F2}");
+                Console.WriteLine("Employee ID:" +EmployeeId);
+                Console.WriteLine("Name:" +FirstName +" " +LastName);
+                Console.WriteLine("Base Salary:" +BaseSalary);
+                Console.WriteLine("Years of Work:" +YearsOfWork);
+                Console.WriteLine("Calculated Salary:" +CalculateSalary());
             }
         }
  
