@@ -4,57 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bank_account
+namespace Person
 {
-    internal class Bank_account
+    public partial class Person11
     {
-        int Account_no;
-        string Account_holder_name;
-        double Balance;
-
-        public Bank_account(int acc_no, string acc_name, double balance)
+        public void PrintFullName()
         {
-            Account_no = acc_no;
-            Account_holder_name = acc_name;
-            Balance = balance;
+            string fullName = ($"{FirstName} {LastName}");
+            Console.WriteLine($"Full Name: {fullName}");
         }
 
-        public void displayDetails()
-        {
-            Console.WriteLine("Account number: " + Account_no);
-            Console.WriteLine("Acount holder name: " + Account_holder_name);
-            Console.WriteLine("Balance: " + Balance);
-        }
-        public void deposit(double amount) {
-            if(amount > 0)
-            {
-                Balance += amount;
-                Console.WriteLine("Deposit amount" + Balance);
-            }
-            else
-            {
-                Console.WriteLine("No deposite amount");
-            }
-        }
-
-        public void withdraw(double amount)
-        {
-            if(amount > 0 && amount <= Balance) {
-                Balance -= amount;
-                Console.WriteLine("Withdrawl amount: " + Balance);
-            }
-            else{
-                Console.WriteLine("Invalid amount");
-            }
-        }
         static void Main(string[] args)
         {
-            Bank_account b = new Bank_account(1801036721, "Payal", 2000);
-            b.displayDetails();
-            b.deposit(1000);
-            b.withdraw(2000);
-            Console.WriteLine("\nAfter perform certain operations");
-            b.displayDetails();
+            Person11 person = new Person11
+            {
+                FirstName = "Payal",
+                LastName = "Bansal"
+            };
+
+            person.PrintFullName(); // Calls the PrintFullName method
+
+            // You can also access properties individually
+            Console.WriteLine($"First Name: {person.FirstName}");
+            Console.WriteLine($"Last Name: {person.LastName}");
+
+            Console.ReadKey();
         }
     }
 }
+
